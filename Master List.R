@@ -97,8 +97,8 @@ while (offset<count){
 }
 #Start code to get the operator name dataframe created
 key2 <-'[key]'
-secret2 <-'7d003af1068b1206'
-tokenURL <- '[secret]'
+secret2 <-'[secret]'
+tokenURL <- 'null'
 accessTokenURL <- 'null'
 authorizeURL <- 'null'
 #oauth_app is defining a service (we are defining our own LP service), lpR makes the token unique
