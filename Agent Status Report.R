@@ -24,7 +24,6 @@ opinfo <- GET(posturl,
 agentinfo<-content(opinfo, "parsed")
 
 agentinfodf=do.call(rbind,lapply(agentinfo,as.data.frame.list,stringsAsFactors=FALSE))
-linksinfo=data.frame()  
 
 #get the operator information details from the API, based on the results from our first query
 operatorinformationdf= do.call(rbind.fill,lapply(agentinfodf$links.href,function(x){
