@@ -23,7 +23,8 @@ sig <- sign_oauth1.0(ehapi,
 )
 #JSON formatted body for the resonse, if you need two quotes, use the opposite for the first set
 coreurl <- "https://va.enghist.liveperson.net/interaction_history/api/account/[siteid]/interactions/search?offset="
-#offset and count are used in our while loop to make sure we pull all that data for the date range we defined
+#offset and count are used in our while loop to make sure we pull all that data for the date range we defined.
+#offset will tell the return which record to start pulling from in the call
 #the EH API has a limit of 100 records at a time
 offset = 0
 count = 1
@@ -134,7 +135,6 @@ chatinfodf=operatorinfot2[df2t]
 #test=operatorinfot2[mstrchatdf]
 mstrchatdf=operatorinfot2[mstrchatdf]
 mstrchatdf<-mstrchatdf[order(mstrchatdf$engagementId,mstrchatdf$duration,mstrchatdf$timeL),]
-#test<-test[order(test$engagementId,test$duration,test$timeL),]
 
 #remove all dataframes
 rm(df2)
